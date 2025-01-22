@@ -1,6 +1,6 @@
 ---
 title: "Assignment 1: Introduction"
-author: "Student Name"
+author: "Sriya Gottumukkula"
 output: pdf_document
 ---
 
@@ -20,24 +20,24 @@ This exercise accompanies the introductory material in Environmental Data Analyt
 ## 1) Discussion Questions
 Enter answers to the questions just below the >Answer: prompt.
 
-1. What are your previous experiences with data analytics, R, and Git? Include both formal and informal training.
+1. What are your previous experiences with data analytics, R, and Git? Include both formal and informal training. 
 
-> Answer: 
+> Answer: I worked with intermediate data analysis and visualization on excel but do not have any experince with R or Git hub
 
 2. Are there any components of the course about which you feel confident?
 
-> Answer: 
+> Answer: Since this is a first R course i am taking, I am new to most of the concepts 
 
 3. Are there any components of the course about which you feel apprehensive?
 
-> Answer: 
+> Answer: Although i am very interested to learn R and hopefully apply data analystics to inform environmental descsion making, i am a bit amprehensive about how much time it will take me be adept with all the skills i will be learning in this class 
 
 
 ## 2) GitHub
 
 Provide a link below to your forked course repository in GitHub. Make sure you have pulled all recent changes from the course repository and that you have updated your course README file, committed those changes, and pushed them to your GitHub account. 
 
-> Answer: 
+> Answer: https://github.com/sg717/EDA_Spring2025.git
 
 ## 3) Knitting
-When you have completed this document, click the `knit` button.This should produce a PDF copy of your markdown document. Submit this PDF to Canvas 
+When you have completed this document, click the `knit` button.
