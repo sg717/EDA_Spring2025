@@ -80,33 +80,66 @@ scholarship <- c("yes","yes","no","no") #character vector
 7.  Combine each of the vectors into a data frame. Assign the data frame an informative name.
 
 ```{r}
-dataframe <- data.frame(names,scores,scholarship)
+dataframe <- data.frame("names","scores","scholarship")
 ```
 
 
 8.  Label the columns of your data frame with informative titles.
 
 ```{r basics 2}
-columnames(dataframe) <- c(names,scores,scholarship)
+colnames(dataframe) <- c("names","scores","scholarship")
 
 ```
 
 9.  QUESTION: How is this data frame different from a matrix?
 
-> Answer:
+> Answer: this data frame is different from a matrix because a data frame can hold multiple data types (characters, numbers) in different columns, while a matrix can only contain a single data type across all its elements.
 
 10. Create a function with one input. In this function, use `if`...`else` to evaluate the value of the input: if it is greater than 50, print the word "Pass"; otherwise print the word "Fail". 
 
+```{r}
+code1 <- function(x) {
+  if(x > 50) {
+   (x <- "pass")
+  } 
+  else {
+    (x <- "fail")
+  }
+}
+
+
+```
+
+
 11. Create a second function that does the exact same thing as the previous one but uses `ifelse()` instead if `if`...`else `. 
 
+```{r}
+code2 <- function(x){
+  ifelse(x>50, "pass", "fail") 
+  
+}
+
+```
+
+
 12. Run both functions using the value 52.5 as the input
+```{r}
+output1 <- code1(52.5)
+output2 <- code2(52.5)
+```
 
 13. Run both functions using the **vector** of student test scores you created as the input. (Only one will work properly...)
+
+```{r}
+#output3 <- code1(scores)
+output4 <- code2(scores)
+```
+
 
 ```{r basics 3}
 #10. Create a function using if...else
 
-coding1 <- function(x) {
+code3 <- function(x) {
   if(x < 4) {
     x*3
   } 
@@ -117,27 +150,34 @@ coding1 <- function(x) {
 
 #11. Create a function using ifelse()
 
-coding1 <- function(x){
+code4 <- function(x){
   ifelse(x<4, x*3, x*2) 
   
 }
 
 #12a. Run the first function with the value 52.5
 
-output1 <- coding1(52.5)
+output5 <- code3(52.5)
 
 #12b. Run the second function with the value 52.5
 
-output2 <- coding1(52.5)
+output6 <- code4(52.5)
 
 #13a. Run the first function with the vector of test scores 
 
+#output7 <- code3(scores)
+
 #13b. Run the second function with the vector of test scores
+
+output8 <- code4(scores)
+
 ```
 
 14. QUESTION: Which option of `if`...`else` vs. `ifelse` worked? Why? (Hint: search the web for "R vectorization")
 
-> Answer:
+
+
+> Answer: only ifelse worked as vectors only work with ifelse() and not if and else because if statements in R are designed to handle a single logical condition, not multiple values. When a vector is used in an if statement, R only checks the first element and ignores the rest, leading to incorrect results or warnings. In contrast, ifelse() is vectorized, meaning it applies the condition element-wise to each value in the vector, returning a result for each one
 
 
 **NOTE** Before knitting, you'll need to comment out the call to the function in Q13 that does not work. (A document can't knit if the code it contains causes an error!)
